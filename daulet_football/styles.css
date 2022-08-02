@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+a{
+    transition: text-decoration .8s;
+    text-decoration: none!important;
+    color: white!important;
+}
+a:hover{
+    text-decoration: underline!important;
+    transition: all .8s;
+}
+header, footer{
+    margin: 0 auto;
+    padding: 18px 0;
+    background: url("https://eoss.asu.edu/sites/default/files/2021-12/novel-title-banner.jpeg") no-repeat;
+    background-size: cover;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: aliceblue;
+    margin: 0 auto;
+}
+ul li {
+    transition: letter-spacing .5s;
+    text-shadow: 2px 2px 2px #ffa9a9;
+    font-size: 20px ;
+}
+ul li:hover {
+    letter-spacing: 5px;
+}
+ul li a{
+    color: black;!important;
+}
+
+.col{
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    border-right: 1px solid black;
+}
+
+
+.col:first-child, .col:nth-child(2),.col:last-child {
+    position: relative;
+    overflow: hidden;
+}
+.col:first-child:before, .col:nth-child(2):before,.col:last-child:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    transition: all 2s;
+}
+.col:first-child:hover:before, .col:nth-child(2):hover:before,.col:last-child:before {
+    transform: rotate(300deg);
+}
+.col:first-child:before {
+    background-color: #a6f35a;
+    background-image: url("https://upload.wikimedia.org/wikipedia/ru/c/c5/FC_Lokomotiv.png");
+    transform: rotate(30deg);
+}
+.col:nth-child(2):before {
+    background-color: #4fe844;
+    background-image: url("https://seeklogo.com/images/H/hannover-96-logo-74869CD5DC-seeklogo.com.png");
+    transform: rotate(30deg);
+}
+.col:last-child{
+    background-color: #4fe844;
+    background-image: url("https://www.luzhniki.ru/media/images/e38bc457f732bbb9970639.2e16d0ba.fill-824x489.format-jpeg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+h2, label {
+    transition: letter-spacing .5s;
+    text-shadow: 2px 0 2px black,
+    0 2px 2px black,
+    -2px 0 2px black,
+    0 -2px 2px black;
+    color: #ffffff;
+}
+h2{
+    font-size: 30px;
+}
+label{
+    font-size: 20px;
+}
+input, textarea{
+    width: 70%;
+    opacity: 0.7;
+    margin: 0 auto;
+    border: none;
+    transition: all .5s;
+}
+input:hover, textarea:hover{
+    opacity: 0.85;
+    border: none;
+    outline: 3px dashed red;
+    transition: all .5s;
+}
+input:focus, textarea:focus{
+    opacity: 1;
+    outline: 3px solid red;
+}
+
+button {
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
